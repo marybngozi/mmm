@@ -12,11 +12,19 @@ module.exports = {
       height: {
         18: "4.5rem",
       },
+      padding: {
+        18: "4.5rem",
+        98: "28.5rem",
+      },
+      margin: {
+        98: "28.5rem",
+      },
     },
     fontFamily: {
       clash: ["ClashDisplay", "sans-serif"],
       mikela: ["Mikela", "cursive"],
       raleway: ["Raleway", "cursive"],
+      cairo: ["Cairo", "cursive"],
     },
   },
   screens: {

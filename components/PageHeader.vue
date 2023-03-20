@@ -1,7 +1,7 @@
 <template>
   <header>
-    <div class="top" :class="`${showNav ? 'bg-top' : 'bg-transparent'}`">
-      <div class="flex w-9/12 justify-between">
+    <div class="top">
+      <div class="flex w-1/12 lg:w-11/12 justify-between">
         <input
           v-if="showSearch"
           placeholder="Type in your search"
@@ -16,56 +16,30 @@
           <button v-if="open" class="px-3">
             <img src="@/assets/images/icons/long_right.svg" alt="arrow icon" />
           </button>
-          <button v-else class="px-3">
-            <img src="@/assets/images/logo.svg" alt="MMM Logo" />
-          </button>
+
+          <nuxt-link
+            v-else
+            class="flex justify-center items-center h-14 w-14 lg:h-18 lg:w-18"
+            to="/"
+          >
+            <img
+              src="@/assets/images/logo.svg"
+              alt="MMM Logo"
+              class="w-18 h-8"
+            />
+          </nuxt-link>
         </span>
-
-        <nav
-          v-if="showNav && !showSearch"
-          class="nav-big hidden lg:flex lg:w-10/12 lg:justify-between"
-        >
-          <div class="flex justify-evenly items-center w-5/12 h-full">
-            <button>
-              <img src="@/assets/images/icons/instagram.svg" alt="icon" />
-            </button>
-            <button>
-              <img src="@/assets/images/icons/twitter.svg" alt="icon" />
-            </button>
-            <button>
-              <img src="@/assets/images/icons/linkedin.svg" alt="icon" />
-            </button>
-            <button>
-              <img src="@/assets/images/icons/behance.svg" alt="icon" />
-            </button>
-            <button>
-              <img src="@/assets/images/icons/profile.svg" alt="icon" />
-            </button>
-          </div>
-
-          <div class="nav-link grid grid-flow-col auto-cols-max">
-            <nuxt-link to="/"> Blog </nuxt-link>
-
-            <nuxt-link to="/"> Podcast </nuxt-link>
-
-            <nuxt-link to="/"> Portfolio </nuxt-link>
-
-            <nuxt-link to="/"> Contact me </nuxt-link>
-          </div>
-        </nav>
       </div>
 
       <div class="flex justify-end">
         <span>
-          <button
-            v-if="open"
-            class="px-4 border-l-2 border-sand lg:border-2 lg:border-black"
-          >
+          <button v-if="open" class="px-4 border-l-2 border-sand">
             <span class="icon icon-bookmark"></span>
           </button>
           <button
             v-else
-            class="px-4 border-l-2 border-sand lg:border-2 lg:border-black"
+            @click="showSearch = true"
+            class="px-4 border-l-2 border-sand"
           >
             <span class="icon icon-search"></span>
           </button>
@@ -73,14 +47,16 @@
 
         <span>
           <button
-            v-if="open"
-            class="px-5 border-l-2 border-sand lg:border-2 lg:border-black"
+            v-if="showClose"
+            @click="close"
+            class="px-5 border-l-2 border-sand"
           >
             <span class="icon icon-close"></span>
           </button>
           <button
             v-else
-            class="px-5 border-l-2 border-sand lg:border-2 lg:border-black"
+            @click="showNav = true"
+            class="px-5 border-l-2 border-sand"
           >
             <span class="icon icon-dashboard"></span>
           </button>
@@ -88,7 +64,7 @@
       </div>
     </div>
 
-    <nav v-if="showNav" class="nav-small block lg:hidden">
+    <nav v-if="showNav" class="nav-small">
       <div class="nav-top">
         <ul>
           <li>
@@ -106,8 +82,14 @@
         </ul>
       </div>
 
-      <div class="nav-mid">
-        <div class="flex w-full justify-evenly">
+      <div class="nav-mid flex justify-between">
+        <div class="hidden lg:flex text-xs lg:w-2/3">
+          <p>MindingmyMind Blog</p>
+          <p>All Rights Reserved</p>
+          <p>{{ new Date().getFullYear() }}<span>&copy;</span></p>
+        </div>
+
+        <div class="flex w-full lg:w-1/3 justify-evenly">
           <button>
             <img src="@/assets/images/icons/instagram.svg" alt="icon" />
           </button>
@@ -139,10 +121,21 @@ export default {
   data() {
     return {
       open: false,
-      showSearch: true,
-      showNav: true,
+      showSearch: false,
+      showNav: false,
       pageSearch: null,
     };
+  },
+  computed: {
+    showClose() {
+      return this.showSearch || this.showNav;
+    },
+  },
+  methods: {
+    close() {
+      this.showSearch = false;
+      this.showNav = false;
+    },
   },
 };
 </script>
@@ -162,16 +155,16 @@ header {
   @apply flex h-full justify-center items-center;
 }
 .icon {
-  @apply w-5 h-5 lg:w-8 lg:h-8 lg:bg-black;
+  @apply w-5 h-5 lg:w-8 lg:h-8;
 }
 input {
-  @apply bg-transparent w-full text-white pl-3 text-xs;
+  @apply bg-brown w-full text-white pl-3 text-sm hover:outline-none active:outline-none;
 }
 input::placeholder {
-  @apply text-xs;
+  @apply text-sm;
 }
 .nav-small {
-  @apply h-32 bg-sand;
+  @apply h-32 lg:h-auto pb-2 bg-sand;
 }
 .nav-top ul {
   @apply flex justify-between;
@@ -182,13 +175,12 @@ input::placeholder {
 .nav-top a {
   @apply inline-block px-4 py-5 text-brown text-xs font-normal font-clash;
 }
-.nav-big button,
 .nav-small button {
   @apply w-8 h-8 flex items-center justify-center;
   border: 1px solid #797371;
 }
 .nav-bottom {
-  @apply flex justify-center font-medium pt-3 font-clash;
+  @apply flex justify-center lg:hidden font-medium pt-3 font-clash;
   font-size: 10px;
   line-height: 12px;
   color: #797371;

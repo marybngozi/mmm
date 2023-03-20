@@ -14,7 +14,7 @@ app.use(
 );
 
 // connect to db
-initDB();
+// initDB();
 
 // api routes
 app.use(routes);

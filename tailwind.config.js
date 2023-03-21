@@ -8,6 +8,9 @@ module.exports = {
       colors: {
         sand: "#E1C5B4",
         brown: "#262626",
+        flax: "#EDD58D",
+        oragYellow: "#FBB91A",
+        sonSilver: "#797371",
       },
       height: {
         18: "4.5rem",

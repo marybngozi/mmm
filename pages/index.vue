@@ -240,7 +240,7 @@
               <div>
                 <h5 class="font-semibold text-2xl">Start date</h5>
                 <ul class="list-disc pl-5 mt-3 text-base lg:text-xl">
-                  <li>24th March, 2023</li>
+                  <li>16th April, 2023</li>
                 </ul>
               </div>
             </div>
@@ -266,15 +266,28 @@
           </div>
         </accordion>
 
-        <button class="bg-oragYellow w-full text-center py-5 mt-8">
-          Join program here
-        </button>
-
-        <button
-          class="border border-oragYellow text-oragYellow w-full text-center py-5 my-8"
+        <a
+          href="https://app.groupify.co/g/mkeGOg4RVoq5"
+          target="_blank"
+          class="bg-oragYellow block w-full text-center py-5 mt-8"
         >
-          Join the Whatsapp group
-        </button>
+          Join program here
+        </a>
+
+        <a
+          href="https://chat.whatsapp.com/E847vOt7jujEnlcq50klcg"
+          target="_blank"
+          class="block border border-oragYellow text-oragYellow w-full text-center py-5 my-8"
+        >
+          Join the design community
+        </a>
+
+        <p
+          class="text-center text-white px-5 font-bold text-sm font-raleway mt-8"
+        >
+          Join the community immediately, so you do not miss out on future
+          updates
+        </p>
       </div>
 
       <div class="yellowjon">
@@ -288,7 +301,7 @@
 
       <div class="joninfo">
         <div
-          class="w-11/12 lg:w-6/12 mx-auto text-base text-white lg:text-2xl font-raleway"
+          class="w-11/12 lg:w-6/12 mx-auto text-base text-justify text-white lg:text-2xl font-raleway"
         >
           <p>
             Over the course of the last two years, I have had the ample
@@ -345,9 +358,13 @@
             Essentially I just want to teach you how to think.
           </p>
 
-          <button class="bg-oragYellow w-full text-center py-5 mt-8 text-black">
+          <a
+            href="https://app.groupify.co/g/mkeGOg4RVoq5"
+            target="_blank"
+            class="bg-oragYellow block w-full text-center py-5 mt-8 text-black"
+          >
             Join program here
-          </button>
+          </a>
         </div>
       </div>
 
@@ -430,7 +447,7 @@ export default {
           says: "The manner of teaching, it’s very clear and direct",
         },
         {
-          name: "Maryanne Olorunmaiye",
+          name: "Maryanne O",
           says: `Classes started off on basic concepts and progressed really well. 
           Although there was a lot to learn in a short time, 
           I liked the fact that important aspects were taught and we were able to put them to practice.`,
@@ -561,7 +578,7 @@ export default {
 /************************** Scroll-bar effect ***************/
 /* width */
 .testim-in::-webkit-scrollbar {
-  height: 5px;
+  height: 0px;
 }
 
 /* Track */

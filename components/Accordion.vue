@@ -14,7 +14,7 @@
     </div>
 
     <transition name="fade">
-      <div class="tab__content py-2" v-show="active"><slot /></div>
+      <div class="tab__content py-2 text-justify" v-show="active"><slot /></div>
     </transition>
   </div>
 </template>

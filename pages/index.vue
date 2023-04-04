@@ -240,7 +240,7 @@
               <div>
                 <h5 class="font-semibold text-2xl">Start date</h5>
                 <ul class="list-disc pl-5 mt-3 text-base lg:text-xl">
-                  <li>16th April, 2023</li>
+                  <li>30th April, 2023</li>
                 </ul>
               </div>
             </div>

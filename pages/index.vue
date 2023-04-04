@@ -400,11 +400,12 @@
             send me an email here
           </p>
 
-          <div
-            class="bg-oragYellow w-full text-center py-5 mt-3 lg:mt-8 text-xs lg:text-base text-black"
+          <a
+            href="mailto:john@mindingmymind.ng"
+            class="bg-oragYellow block w-full text-center py-5 mt-3 lg:mt-8 text-xs lg:text-base text-black"
           >
             John@mindingmymind.ng
-          </div>
+          </a>
         </div>
       </div>
     </section>

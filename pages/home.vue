@@ -1,7 +1,7 @@
 <template>
   <div class="h-screen">
     <div class="page">
-      <PageHeader class="" />
+      <PageHeader />
 
       <main
         class="pt-40 lg:pt-24 block lg:flex gap-11 justify-between items-center"

@@ -12,6 +12,7 @@ module.exports = {
         flax: "#EDD58D",
         oragYellow: "#FBB91A",
         sonSilver: "#797371",
+        camblue: "#A1BEAC",
       },
       height: {
         18: "4.5rem",

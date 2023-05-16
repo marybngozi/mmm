@@ -3,7 +3,7 @@
     <SmallCard
       v-for="i in n"
       :key="i"
-      class="w-[284px] lg:w-[570px] h-[179px] lg:h-[300px]"
+      class="w-[284px] lg:w-[570px] h-[auto] lg:h-[300px]"
     />
   </div>
 </template>

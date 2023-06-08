@@ -46,6 +46,6 @@
     "eslint-plugin-vue": "*"
   },
   "engines": {
-    "node": "15.1.0"
+    "node": "16.14.0"
   }
 }

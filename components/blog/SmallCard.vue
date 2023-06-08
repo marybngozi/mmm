@@ -8,13 +8,13 @@
 
     <div class="p-2.5 lg:p-5 bg-white">
       <h3 class="font-mikela text-lg lg:text-4xl">
-        So I’ve sought to understand why we yearn for Companionship...
+        So I've sought to understand why we yearn for Companionship...
       </h3>
 
       <h6
         class="font-clash text-xs lg:text-3xl text-[#262626] mt-1.5 lg:mt-2.5"
       >
-        Here is what i learned
+        Here is what I learned
       </h6>
 
       <div class="flex justify-between items-center mt-1.5 lg:mt-3">

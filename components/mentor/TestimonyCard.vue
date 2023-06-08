@@ -1,5 +1,5 @@
 <template>
-  <div class="testi-card">
+  <div class="testimony-card">
     <img src="@/assets/images/user.png" alt="user" class="h-7 w-7" />
 
     <div class="font-bold font-cairo text-2xxl mt-3">{{ testimony.name }}</div>
@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: "TestiCard",
+  name: "TestimonyCard",
 
   props: {
     testimony: {
@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style scoped>
-.testi-card {
+.testimony-card {
   background: #ffffff;
   padding: 20px;
   width: 20rem;

@@ -44,5 +44,8 @@
     "eslint": "*",
     "eslint-plugin-prettier": "*",
     "eslint-plugin-vue": "*"
+  },
+  "engines": {
+    "node": "15.1.0"
   }
 }

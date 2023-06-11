@@ -5,7 +5,7 @@
 
       <main class="flex flex-col justify-end h-[80vh]">
         <h1 class="text-white font-mikela text-5xl w-full lg:w-[353px]">
-          So I’ve sought to understand why we yearn for Companionship...
+          So I've sought to understand why we yearn for Companionship...
         </h1>
 
         <div

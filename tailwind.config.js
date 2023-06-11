@@ -24,6 +24,9 @@ module.exports = {
       margin: {
         98: "28.5rem",
       },
+      lineHeight: {
+        12: "3rem",
+      },
     },
     fontFamily: {
       clash: ["ClashDisplay", "sans-serif"],

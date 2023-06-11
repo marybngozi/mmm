@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen">
+  <div class="h-screen bg-black">
     <div class="page">
       <PageHeader />
 
@@ -66,11 +66,11 @@ export default {
 </script>
 <style scoped>
 .page {
-  @apply bg-black w-full px-5 lg:px-18 pt-5;
+  @apply bg-black h-auto w-full px-5 lg:px-18 pt-16;
 }
 main {
   width: 100%;
-  height: calc(100vh - 120px);
+  min-height: calc(100vh - 120px);
   background-image: linear-gradient(
       0deg,
       rgba(15, 4, 11, 0.3),

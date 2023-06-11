@@ -1,15 +1,17 @@
 <template>
-  <div class="flex justify-between items-stretch">
-    <img
-      src="@/assets/images/posts.png"
-      alt="post image"
-      class="w-[65px] lg:w-[162px] object-cover"
-    />
+  <div class="flex justify-between">
+    <div class="w-1/3">
+      <img
+        src="@/assets/images/posts.png"
+        alt="post image"
+        class="w-full object-cover h-full object-center"
+      />
+    </div>
 
-    <div class="p-2.5 lg:p-5 bg-white">
-      <h3 class="font-mikela text-lg lg:text-4xl">
+    <div class="p-2.5 lg:p-5 bg-white w-2/3">
+      <nuxt-link to="/blog/123" class="font-mikela text-lg lg:text-4xl">
         So I've sought to understand why we yearn for Companionship...
-      </h3>
+      </nuxt-link>
 
       <h6
         class="font-clash text-xs lg:text-3xl text-[#262626] mt-1.5 lg:mt-2.5"

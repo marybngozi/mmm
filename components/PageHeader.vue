@@ -44,7 +44,9 @@
             v-else
             @click.native="searchBlog"
             to="/blog/search"
-            class="px-4 block button border-l-2 border-sand text-white"
+            :class="`px-4 block button border-l-2 border-sand ${
+              showSearch ? 'bg-white' : 'bg-transparent'
+            }`"
           >
             <span class="icon icon-search"></span>
           </nuxt-link>
@@ -77,7 +79,7 @@
             <nuxt-link to="/blog"> Blog </nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/"> Podcast </nuxt-link>
+            <nuxt-link to="/blog/bookmark"> Bookmark </nuxt-link>
           </li>
           <li>
             <nuxt-link to="/"> About me </nuxt-link>
@@ -156,7 +158,7 @@ export default {
 <style scoped>
 @import url("../assets/css/icons.css");
 header {
-  @apply w-full border-2 lg:border border-sand;
+  @apply border-2 lg:border border-sand bg-black fixed top-0 lg:top-4 left-0 lg:left-14 right-0 lg:right-14;
 }
 .top {
   @apply w-full flex justify-between h-14 lg:h-18;

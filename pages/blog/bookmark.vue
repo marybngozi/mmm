@@ -4,17 +4,18 @@
       <PageHeader />
 
       <main class="mt-5 lg:pt-14">
-        <section>
-          <CategoryList />
-
-          <hr class="border-t border-gray-500 my-3" />
-
-          <div
+        <section class="flex justify-between items-end w-full">
+          <h3
             class="mt-5 text-gray-400 font-clash font-medium text-sm lg:text-xl"
           >
-            Before you make your search, you can easily have a taste of any of
-            our popular wines
-          </div>
+            <span class="underline">Your </span> Bookmarks
+          </h3>
+
+          <button
+            class="bg-sand border-[#aa9385] font-clash text-xs lg:text-base border-8 py-1.5 px-4 lg:p-2"
+          >
+            10 marks
+          </button>
         </section>
 
         <section class="mt-4 lg:mt-10 grid gap-4 grid-cols-1 lg:grid-cols-3">
@@ -32,7 +33,7 @@ import PageFooter from "@/components/PageFooter.vue";
 import SmallCard from "@/components/blog/SmallCard.vue";
 import CategoryList from "@/components/blog/CategoryList.vue";
 export default {
-  name: "BlogSearch",
+  name: "BlogBookmark",
 
   components: {
     PageHeader,

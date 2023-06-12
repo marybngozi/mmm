@@ -125,7 +125,7 @@
 
 <script>
 export default {
-  name: "PageHeader",
+  name: "BlogHeader",
   data() {
     return {
       open: false,

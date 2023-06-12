@@ -41,7 +41,7 @@
 
 <script>
 export default {
-  name: "PageFooter",
+  name: "BlogFooter",
 
   data() {
     return {

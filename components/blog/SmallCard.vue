@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between">
+  <div class="flex justify-between shadow-md">
     <div class="w-1/3">
       <img
         src="@/assets/images/posts.png"

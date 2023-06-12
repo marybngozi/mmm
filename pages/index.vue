@@ -45,8 +45,8 @@
 </template>
 
 <script>
-import PageHeader from "@/components/PageHeader.vue";
-import PageFooter from "@/components/PageFooter.vue";
+import PageHeader from "@/components/blog/Header.vue";
+import PageFooter from "@/components/blog/Footer.vue";
 import CardList from "@/components/home/CardList.vue";
 export default {
   name: "Home",

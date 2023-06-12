@@ -78,7 +78,7 @@
           </article>
         </section>
 
-        <section id="feedback" class="mt-12 px-4 pb-14">
+        <section id="feedback" class="mt-12 px-4">
           <div class="text-center font-clash text-xs lg:text-base">
             So for this breif moment, let's assume I took you out on an
             expensive date. We have been laughing all evening and smilling away
@@ -177,10 +177,18 @@
               </div>
             </div>
           </div>
+
+          <hr class="border-t border-gray-300" />
         </section>
 
-        <section id="cardList" class="mt-12">
-          <CardList />
+        <section id="smiliarPosts" class="mt-12 pb-14">
+          <h3 class="font-clash text-[#B3B4B4] text-sm lg:text-2xl font-medium">
+            <span class="underline">Some ot</span>her vintage wines you might
+            like
+          </h3>
+          <div id="cardList" class="mt-6 pb-4">
+            <CardList />
+          </div>
         </section>
       </main>
     </div>
@@ -189,9 +197,9 @@
 </template>
 
 <script>
-import PageHeader from "@/components/PageHeader.vue";
-import CardList from "@/components/home/CardList.vue";
-import PageFooter from "@/components/PageFooter.vue";
+import PageHeader from "@/components/blog/Header.vue";
+import CardList from "@/components/blog/CardList.vue";
+import PageFooter from "@/components/blog/Footer.vue";
 export default {
   name: "SingleBlog",
 
@@ -260,9 +268,11 @@ article p {
   @apply flex justify-between mt-5 py-3 px-4;
   border-top: 3px solid lightgray;
 }
-#cardList {
+#smiliarPosts {
   @apply px-4 mx-auto;
   max-width: 850px;
-  overflow-x: hidden;
+}
+#cardList {
+  overflow-x: scroll;
 }
 </style>

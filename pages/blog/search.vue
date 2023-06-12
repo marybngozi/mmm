@@ -27,8 +27,8 @@
 </template>
 
 <script>
-import PageHeader from "@/components/PageHeader.vue";
-import PageFooter from "@/components/PageFooter.vue";
+import PageHeader from "@/components/blog/Header.vue";
+import PageFooter from "@/components/blog/Footer.vue";
 import SmallCard from "@/components/blog/SmallCard.vue";
 import CategoryList from "@/components/blog/CategoryList.vue";
 export default {

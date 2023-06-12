@@ -125,7 +125,7 @@
 
 <script>
 export default {
-  name: "BlogHeader",
+  name: "UserHeader",
   data() {
     return {
       open: false,

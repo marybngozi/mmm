@@ -27,8 +27,8 @@
 </template>
 
 <script>
-import BlogHeader from "@/components/blog/BlogHeader.vue";
-import BlogFooter from "@/components/blog/BlogFooter.vue";
+import BlogHeader from "@/components/blog/Header.vue";
+import BlogFooter from "@/components/blog/Footer.vue";
 import SmallCard from "@/components/blog/SmallCard.vue";
 import CategoryList from "@/components/blog/CategoryList.vue";
 export default {

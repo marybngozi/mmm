@@ -197,9 +197,9 @@
 </template>
 
 <script>
-import BlogHeader from "@/components/blog/BlogHeader.vue";
+import BlogHeader from "@/components/blog/Header.vue";
 import CardList from "@/components/blog/CardList.vue";
-import BlogFooter from "@/components/blog/BlogFooter.vue";
+import BlogFooter from "@/components/blog/Footer.vue";
 export default {
   name: "SingleBlog",
 

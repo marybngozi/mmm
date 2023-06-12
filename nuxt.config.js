@@ -15,6 +15,11 @@ export default {
       { name: "format-detection", content: "telephone=no" },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    script: [
+      {
+        src: "https://accounts.google.com/gsi/client",
+      },
+    ],
   },
 
   // loading: "~/components/loading.vue",
@@ -69,4 +74,8 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  publicRuntimeConfig: {
+    googleClientId: process.env.GOOGLE_CLIENT_ID,
+  },
 };

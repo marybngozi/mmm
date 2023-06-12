@@ -24,6 +24,7 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "joi": "^17.3.0",
+    "jwt-decode": "^3.1.2",
     "moment": "^2.24.0",
     "mongoose": "^5.2.4",
     "mustache": "^4.1.0",
@@ -38,12 +39,12 @@
   "devDependencies": {
     "@nuxtjs/fontawesome": "^1.1.2",
     "@nuxtjs/tailwindcss": "^4.2.1",
-    "eslint-config-prettier": "*",
-    "postcss": "^8.4.4",
-    "prettier": "*",
     "eslint": "*",
+    "eslint-config-prettier": "*",
     "eslint-plugin-prettier": "*",
-    "eslint-plugin-vue": "*"
+    "eslint-plugin-vue": "*",
+    "postcss": "^8.4.4",
+    "prettier": "*"
   },
   "engines": {
     "node": "16.14.0"

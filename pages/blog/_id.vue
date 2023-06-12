@@ -1,7 +1,7 @@
 <template>
   <div class="body">
     <div class="page">
-      <PageHeader />
+      <BlogHeader />
 
       <main>
         <section class="jumbotron">
@@ -192,21 +192,21 @@
         </section>
       </main>
     </div>
-    <PageFooter />
+    <BlogFooter />
   </div>
 </template>
 
 <script>
-import PageHeader from "@/components/blog/Header.vue";
+import BlogHeader from "@/components/blog/BlogHeader.vue";
 import CardList from "@/components/blog/CardList.vue";
-import PageFooter from "@/components/blog/Footer.vue";
+import BlogFooter from "@/components/blog/BlogFooter.vue";
 export default {
   name: "SingleBlog",
 
   components: {
-    PageHeader,
+    BlogHeader,
     CardList,
-    PageFooter,
+    BlogFooter,
   },
 };
 </script>

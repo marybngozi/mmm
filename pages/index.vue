@@ -1,7 +1,7 @@
 <template>
   <div class="h-screen bg-black">
     <div class="page">
-      <PageHeader />
+      <BlogHeader />
 
       <main
         class="pt-40 lg:pt-24 block lg:flex gap-11 justify-between items-center"
@@ -40,20 +40,20 @@
         </div>
       </main>
     </div>
-    <PageFooter />
+    <BlogFooter />
   </div>
 </template>
 
 <script>
-import PageHeader from "@/components/blog/Header.vue";
-import PageFooter from "@/components/blog/Footer.vue";
-import CardList from "@/components/home/CardList.vue";
+import BlogHeader from "@/components/blog/BlogHeader.vue";
+import BlogFooter from "@/components/blog/BlogFooter.vue";
+import CardList from "@/components/blog/CardList.vue";
 export default {
   name: "Home",
 
   components: {
-    PageHeader,
-    PageFooter,
+    BlogHeader,
+    BlogFooter,
     CardList,
   },
 

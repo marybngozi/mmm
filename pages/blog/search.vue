@@ -1,7 +1,7 @@
 <template>
   <div class="h-screen">
     <div class="page">
-      <PageHeader />
+      <BlogHeader />
 
       <main class="mt-5 lg:pt-14">
         <section>
@@ -22,21 +22,21 @@
         </section>
       </main>
     </div>
-    <PageFooter />
+    <BlogFooter />
   </div>
 </template>
 
 <script>
-import PageHeader from "@/components/blog/Header.vue";
-import PageFooter from "@/components/blog/Footer.vue";
+import BlogHeader from "@/components/blog/BlogHeader.vue";
+import BlogFooter from "@/components/blog/BlogFooter.vue";
 import SmallCard from "@/components/blog/SmallCard.vue";
 import CategoryList from "@/components/blog/CategoryList.vue";
 export default {
   name: "BlogSearch",
 
   components: {
-    PageHeader,
-    PageFooter,
+    BlogHeader,
+    BlogFooter,
     SmallCard,
     CategoryList,
   },

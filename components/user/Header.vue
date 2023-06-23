@@ -158,7 +158,7 @@ export default {
 <style scoped>
 @import url("../../assets/css/icons.css");
 header {
-  @apply border-2 lg:border border-sand bg-black fixed top-0 lg:top-4 left-0 lg:left-14 right-0 lg:right-14;
+  @apply border-2 lg:border border-sand bg-black fixed top-4 left-4 lg:left-14 right-4 lg:right-14;
 }
 .top {
   @apply w-full flex justify-between h-14 lg:h-18;

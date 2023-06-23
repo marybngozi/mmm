@@ -58,7 +58,7 @@ export default {
       // call your backend API here
       // save token to localStorage
       // redirect to user home page
-      this.$router.push("/user");
+      this.$router.push("/user/home");
     },
   },
 };

@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       colors: {
         sand: "#E1C5B4",
+        darksand: "#aa9385",
         brown: "#262626",
         flax: "#EDD58D",
         oragYellow: "#FBB91A",

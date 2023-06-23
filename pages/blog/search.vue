@@ -50,7 +50,7 @@ export default {
 </script>
 <style scoped>
 .page {
-  @apply bg-black w-full px-5 lg:px-18 py-16;
+  @apply bg-black w-full px-5 lg:px-18 pt-20 pb-16;
 }
 main {
   width: 100%;

@@ -1,12 +1,12 @@
 <template>
   <div class="flex gap-4 w-full flex-wrap">
-    <div
+    <button
       v-for="(cat, x) in categories"
       :key="x"
       :class="`category ${cat.active ? 'active' : ''}`"
     >
       {{ cat.name }}
-    </div>
+    </button>
   </div>
 </template>
 
@@ -14,9 +14,15 @@
 export default {
   name: "CategoryList",
 
-  data() {
-    return {
-      categories: [
+  props: {
+    mode: {
+      type: String,
+      default: "multiple",
+      // values: "multiple" | "single",
+    },
+    categories: {
+      type: Array,
+      default: () => [
         { name: "All", active: true, value: "all" },
         { name: "Opinion", active: false, value: "opinion" },
         { name: "Love", active: false, value: "love" },
@@ -25,7 +31,11 @@ export default {
         { name: "Governance", active: false, value: "governance" },
         { name: "Design", active: false, value: "design" },
       ],
-    };
+    },
+  },
+
+  data() {
+    return {};
   },
 };
 </script>

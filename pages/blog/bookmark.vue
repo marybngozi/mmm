@@ -11,15 +11,30 @@
             <span class="underline">Your </span> Bookmarks
           </h3>
 
-          <button
-            class="bg-sand border-[#aa9385] font-clash text-xs lg:text-base border-8 py-1.5 px-4 lg:p-2"
+          <div
+            class="bg-sand border-darksand font-clash text-xs lg:text-base border-8 py-1.5 px-4 lg:p-2"
           >
             10 marks
-          </button>
+          </div>
         </section>
 
         <section class="mt-4 lg:mt-10 grid gap-4 grid-cols-1 lg:grid-cols-3">
-          <SmallCard v-for="d in 10" :key="d" class="w-full h-auto" />
+          <div
+            v-if="!bookmarks.length"
+            class="flex flex-col justify-center items-center gap-[29px] mt-6"
+          >
+            <img
+              src="@/assets/images/no-bookmark.svg"
+              alt="no bookmark"
+              class="h-[225px] w-[287px]"
+            />
+
+            <p class="font-clash text-white text-xs">
+              You have made no impression yet
+            </p>
+          </div>
+
+          <SmallCard v-for="d in bookmarks" :key="d" class="w-full h-auto" />
         </section>
       </main>
     </div>
@@ -44,6 +59,8 @@ export default {
 
   data() {
     return {
+      bookmarks: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      // bookmarks: [],
       menuClicked: false,
     };
   },
@@ -51,7 +68,7 @@ export default {
 </script>
 <style scoped>
 .page {
-  @apply bg-black w-full px-5 lg:px-18 py-16;
+  @apply bg-black w-full px-5 lg:px-18 pt-20 pb-16;
 }
 main {
   width: 100%;

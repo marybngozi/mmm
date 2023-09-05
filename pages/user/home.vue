@@ -62,8 +62,8 @@ main {
 }
 
 #nav {
-  @apply sticky bg-black pt-10 top-0;
-  z-index: 100;
+  @apply bg-black pt-10 top-0;
+  /* z-index: 100; */
 }
 
 #nav ul {

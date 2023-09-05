@@ -35,10 +35,16 @@
       </div>
 
       <div class="flex justify-end">
-        <span>
-          <button v-if="open" class="px-4 border-l-2 border-sand">
+        <!-- <span>
+          <nuxt-link
+            to="/blog/bookmark"
+            v-if="bookmark || showNav"
+            :class="`px-4 border-l-2 button border-sand block ${
+              bookmark ? 'bg-white' : 'bg-transparent'
+            }`"
+          >
             <span class="icon icon-bookmark"></span>
-          </button>
+          </nuxt-link>
 
           <nuxt-link
             v-else
@@ -50,13 +56,13 @@
           >
             <span class="icon icon-search"></span>
           </nuxt-link>
-        </span>
+        </span> -->
 
         <span>
           <button
             v-if="showClose"
             @click="close"
-            class="px-5 border-l-2 border-sand"
+            class="px-5 border-l-2 border-sand outline-none"
           >
             <span class="icon icon-close"></span>
           </button>
@@ -79,13 +85,16 @@
             <nuxt-link to="/blog"> Blog </nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/blog/bookmark"> Bookmark </nuxt-link>
+            <nuxt-link to="/"> Shop </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link to="/mentorship"> Mentorship </nuxt-link>
           </li>
           <li>
             <nuxt-link to="/"> About me </nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/"> Shop </nuxt-link>
+            <nuxt-link to="/"> Contact me </nuxt-link>
           </li>
         </ul>
       </div>
@@ -97,28 +106,25 @@
           <p>{{ new Date().getFullYear() }} &nbsp;<span>&copy;</span></p>
         </div>
 
-        <div class="flex w-full lg:w-1/3 justify-evenly">
-          <button>
-            <img src="@/assets/images/icons/instagram.svg" alt="icon" />
-          </button>
-          <button>
-            <img src="@/assets/images/icons/twitter.svg" alt="icon" />
-          </button>
-          <button>
-            <img src="@/assets/images/icons/linkedin.svg" alt="icon" />
-          </button>
-          <button>
-            <img src="@/assets/images/icons/behance.svg" alt="icon" />
-          </button>
-          <button>
-            <img src="@/assets/images/icons/profile.svg" alt="icon" />
+        <div class="flex w-full lg:w-1/3 justify-end gap-6 px-2">
+          <nuxt-link to="/auth" title="Signup page">
+            <img src="@/assets/images/icons/profile.svg" alt="login icon" />
+          </nuxt-link>
+
+          <button class="text-xs lg:text-base border border-black py-1.5 px-5">
+            Logout
+            <!-- <img src="@/assets/images/icons/linkedin.svg" alt="icon" /> -->
           </button>
         </div>
       </div>
 
-      <div class="nav-bottom">
-        ...this blog is my little attempt at Loving you
-      </div>
+      <!-- <div class="nav-bottom">
+        <p>MindingmyMind Blog</p>
+        <p>All Rights Reserved</p>
+        <p>
+          {{ new Date().getFullYear() }} <span class="text-sm"> &copy;</span>
+        </p>
+      </div> -->
     </nav>
   </header>
 </template>
@@ -139,6 +145,9 @@ export default {
     },
     showSearch() {
       return this.$route.name == "blog-search";
+    },
+    bookmark() {
+      return this.$route.name == "blog-bookmark";
     },
   },
   methods: {
@@ -180,7 +189,7 @@ input::placeholder {
   @apply text-sm;
 }
 .nav-small {
-  @apply h-32 lg:h-auto pb-2 bg-sand;
+  @apply h-auto lg:h-auto pb-2 bg-sand;
 }
 .nav-top ul {
   @apply flex justify-between lg:justify-end lg:gap-8 lg:pr-10;
@@ -189,16 +198,15 @@ input::placeholder {
   @apply flex items-center h-full px-4 text-brown text-base font-normal font-clash;
 }
 .nav-top a {
-  @apply inline-block px-4 py-5 text-brown text-xs lg:text-base font-normal lg:font-medium font-clash;
+  @apply inline-block px-2 py-5 text-brown text-xs lg:text-base font-normal lg:font-medium font-clash;
 }
 .nav-small button {
-  @apply w-8 h-8 flex items-center justify-center;
-  border: 1px solid #797371;
+  @apply flex items-center justify-center;
+  /* border: 1px solid #797371; */
 }
 .nav-bottom {
-  @apply flex justify-center lg:hidden font-medium pt-3 font-clash;
+  @apply flex justify-center items-center lg:hidden pt-3 font-clash text-black gap-3;
   font-size: 10px;
   line-height: 12px;
-  color: #797371;
 }
 </style>

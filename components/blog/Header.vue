@@ -36,9 +36,15 @@
 
       <div class="flex justify-end">
         <span>
-          <button v-if="open" class="px-4 border-l-2 border-sand">
+          <nuxt-link
+            to="/blog/bookmark"
+            v-if="bookmark || showNav"
+            :class="`px-4 border-l-2 button border-sand block ${
+              bookmark ? 'bg-white' : 'bg-transparent'
+            }`"
+          >
             <span class="icon icon-bookmark"></span>
-          </button>
+          </nuxt-link>
 
           <nuxt-link
             v-else
@@ -56,7 +62,7 @@
           <button
             v-if="showClose"
             @click="close"
-            class="px-5 border-l-2 border-sand"
+            class="px-5 border-l-2 border-sand outline-none"
           >
             <span class="icon icon-close"></span>
           </button>
@@ -79,13 +85,16 @@
             <nuxt-link to="/blog"> Blog </nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/blog/bookmark"> Bookmark </nuxt-link>
-          </li>
-          <li>
-            <nuxt-link to="/"> About me </nuxt-link>
-          </li>
-          <li>
             <nuxt-link to="/"> Shop </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link to="/mentorship"> Mentorship </nuxt-link>
+          </li>
+          <!-- <li>
+            <nuxt-link to="/"> About me </nuxt-link>
+          </li> -->
+          <li>
+            <nuxt-link to="/contact"> Contact me </nuxt-link>
           </li>
         </ul>
       </div>
@@ -117,7 +126,11 @@
       </div>
 
       <div class="nav-bottom">
-        ...this blog is my little attempt at Loving you
+        <p>MindingmyMind Blog</p>
+        <p>All Rights Reserved</p>
+        <p>
+          {{ new Date().getFullYear() }} <span class="text-sm"> &copy;</span>
+        </p>
       </div>
     </nav>
   </header>
@@ -140,6 +153,9 @@ export default {
     showSearch() {
       return this.$route.name == "blog-search";
     },
+    bookmark() {
+      return this.$route.name == "blog-bookmark";
+    },
   },
   methods: {
     close() {
@@ -158,10 +174,11 @@ export default {
 <style scoped>
 @import url("../../assets/css/icons.css");
 header {
-  @apply border-2 lg:border border-sand bg-black fixed top-4 left-4 lg:left-14 right-4 lg:right-14;
+  @apply border-2 lg:border border-sand bg-transparent fixed top-4 left-4 lg:left-14 right-4 lg:right-14;
+  z-index: 5;
 }
 .top {
-  @apply w-full flex justify-between h-14 lg:h-18;
+  @apply w-full flex justify-between h-14 lg:h-18 bg-black;
 }
 .bg-top {
   @apply bg-transparent lg:bg-sand;
@@ -189,16 +206,15 @@ input::placeholder {
   @apply flex items-center h-full px-4 text-brown text-base font-normal font-clash;
 }
 .nav-top a {
-  @apply inline-block px-4 py-5 text-brown text-xs lg:text-base font-normal lg:font-medium font-clash;
+  @apply inline-block px-2 py-5 text-brown text-xs lg:text-base font-normal lg:font-medium font-clash;
 }
 .nav-small button {
   @apply w-8 h-8 flex items-center justify-center;
   border: 1px solid #797371;
 }
 .nav-bottom {
-  @apply flex justify-center lg:hidden font-medium pt-3 font-clash;
+  @apply flex justify-center items-center lg:hidden pt-3 font-clash text-black gap-3;
   font-size: 10px;
   line-height: 12px;
-  color: #797371;
 }
 </style>

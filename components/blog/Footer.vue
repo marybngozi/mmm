@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-sand px-4 fixed bottom-0 left-0 right-0">
+  <footer style="z-index: 3" class="bg-sand px-4 fixed bottom-0 left-0 right-0">
     <div
       v-if="showPage"
       class="flex justify-between items-center divide-x divide-black"
@@ -19,16 +19,16 @@
 
     <div v-else class="flex justify-between items-center py-3">
       <div class="flex gap-1 text-xs lg:text-sm">
-        <p class="font-clash font-medium text-black">MindingmyMind Blog</p>
-        <p>{{ year }}</p>
-        <p>&copy;</p>
+        <p class="font-clash font-medium text-[#797371]">
+          ...this blog is my little attempt at Loving you
+        </p>
       </div>
 
       <div class="flex gap-1 items-center">
         <font-awesome-icon class="w-4 h-4" :icon="['fab', 'instagram']" />
         <font-awesome-icon class="w-5 h-4" :icon="['fab', 'twitter']" />
         <a
-          class="text-xs lg:text-sm font-clash"
+          class="text-xs lg:text-sm font-clash text-[#797371]"
           href="https://twitter.com/sen_se___"
           target="_blank"
         >
@@ -50,9 +50,6 @@ export default {
   },
 
   computed: {
-    year() {
-      return new Date().getFullYear();
-    },
     showPage() {
       return this.$route.name == "blog";
     },

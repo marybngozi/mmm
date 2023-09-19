@@ -1,5 +1,5 @@
 <template>
-  <table class="mt-3">
+  <table class="mt-3 w-full">
     <tr>
       <td>Payment Method</td>
       <td>Paid with Cards, Bank Transfer or USSD</td>

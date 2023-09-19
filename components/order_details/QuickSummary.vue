@@ -1,5 +1,5 @@
 <template>
-  <table class="mt-3">
+  <table class="mt-3 w-full">
     <tr>
       <td>Order Date</td>
       <td>12th June 2023</td>

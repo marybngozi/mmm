@@ -2,7 +2,7 @@
   <div class="holder">
     <div class="flex justify-end lg:pr-18">
       <button
-        @click="$router.go(-1)"
+        @click="$router.back()"
         class="border-2 border-sand h-14 w-14 flex justify-center items-center"
       >
         <img src="@/assets/images/icons/close.svg" alt="icons" />

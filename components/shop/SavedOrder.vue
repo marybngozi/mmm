@@ -7,11 +7,17 @@
         </div>
       </div>
 
-      <div class="">
+      <div class="flex flex-col items-start justify-start">
         <h5 class="font-clash font-bold">Cart #123948593</h5>
         <p class="font-semibold">4 items in cart</p>
         <p class="font-bold">NGN 32,000.00</p>
         <p class="font-semibold">Fee does not include delivery</p>
+        <nuxt-link
+          to="/user/home/order-details/5"
+          class="border-2 border-sand text-sand text-xs lg:text-sm px-6 py-1.5 font-raleway mt-2 lg:mt-4 block"
+        >
+          View details
+        </nuxt-link>
       </div>
     </div>
 

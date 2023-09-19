@@ -91,11 +91,12 @@
 
           <div class="text-stat">
             <div class="flex gap-4 items-center">
-              <img
+              <!-- <img
                 src="@/assets/images/icons/wine_glasses.svg"
                 alt="icons"
                 class="h-7 lg:h-10"
-              />
+              /> -->
+              <WineGlass class="h-7 lg:h-14" />
               <h4 class="text-xs lg:text-base">2.3K Toasts</h4>
             </div>
 
@@ -156,11 +157,12 @@
 
                 <div class="stat">
                   <div class="flex gap-4 items-center">
-                    <img
+                    <!-- <img
                       src="@/assets/images/icons/wine_glasses.svg"
                       alt="icons"
                       class="h-5 lg:h-7"
-                    />
+                    /> -->
+                    <WineGlass class="h-5 lg:h-9" />
                     <h4>2.3K Toasts</h4>
                   </div>
 
@@ -198,6 +200,7 @@
 
 <script>
 import BlogHeader from "@/components/blog/Header.vue";
+import WineGlass from "@/components/icons/WineGlass.vue";
 import CardList from "@/components/blog/CardList.vue";
 import BlogFooter from "@/components/blog/Footer.vue";
 export default {
@@ -205,6 +208,7 @@ export default {
 
   components: {
     BlogHeader,
+    WineGlass,
     CardList,
     BlogFooter,
   },

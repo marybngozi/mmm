@@ -42,4 +42,7 @@ export default {
 .nuxt-link-exact-active {
   @apply bg-camblue text-black border-camblue;
 }
+.nuxt-link-active {
+  @apply bg-camblue text-black border-camblue;
+}
 </style>

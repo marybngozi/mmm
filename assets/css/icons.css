@@ -1,0 +1,70 @@
+.icon-bookmark {
+  background-color: #e1c5b4;
+  mask: url("../images/icons/bookmark.svg") no-repeat center / contain;
+  -webkit-mask: url("../images/icons/bookmark.svg") no-repeat center / contain;
+}
+.icon-bookmark-shop {
+  background-color: #262626;
+  mask: url("../images/icons/bookmark.svg") no-repeat center / contain;
+  -webkit-mask: url("../images/icons/bookmark.svg") no-repeat center / contain;
+}
+.icon-search {
+  background-color: #e1c5b4;
+  mask: url("../images/icons/search.svg") no-repeat center / contain;
+  -webkit-mask: url("../images/icons/search.svg") no-repeat center / contain;
+}
+.icon-close {
+  background-color: #e1c5b4;
+  mask: url("../images/icons/close.svg") no-repeat center / contain;
+  -webkit-mask: url("../images/icons/close.svg") no-repeat center / contain;
+}
+.icon-search-shop {
+  background-color: #262626;
+  mask: url("../images/icons/search.svg") no-repeat center / contain;
+  -webkit-mask: url("../images/icons/search.svg") no-repeat center / contain;
+}
+.icon-close-shop {
+  background-color: #262626;
+  mask: url("../images/icons/close.svg") no-repeat center / contain;
+  -webkit-mask: url("../images/icons/close.svg") no-repeat center / contain;
+}
+.icon-dashboard-shop {
+  background-color: #262626;
+  mask: url("../images/icons/dashboard.svg") no-repeat center / contain;
+  -webkit-mask: url("../images/icons/dashboard.svg") no-repeat center / contain;
+}
+.icon-dashboard {
+  background-color: #e1c5b4;
+  mask: url("../images/icons/dashboard.svg") no-repeat center / contain;
+  -webkit-mask: url("../images/icons/dashboard.svg") no-repeat center / contain;
+}
+.icon-instagram {
+  background-color: #797371;
+  mask: url("../images/icons/instagram.svg") no-repeat center / contain;
+  -webkit-mask: url("../images/icons/instagram.svg") no-repeat center / contain;
+}
+.icon-twitter {
+  background-color: #797371;
+  mask: url("../images/icons/twitter.svg") no-repeat center / contain;
+  -webkit-mask: url("../images/icons/twitter.svg") no-repeat center / contain;
+}
+.icon-linkedin {
+  background-color: #797371;
+  mask: url("../images/icons/linkedin.svg") no-repeat center / contain;
+  -webkit-mask: url("../images/icons/linkedin.svg") no-repeat center / contain;
+}
+.icon-behance {
+  background-color: #797371;
+  mask: url("../images/icons/behance.svg") no-repeat center / contain;
+  -webkit-mask: url("../images/icons/behance.svg") no-repeat center / contain;
+}
+.icon-profile {
+  background-color: #e1c5b4;
+  mask: url("../images/icons/profile.svg") no-repeat center / contain;
+  -webkit-mask: url("../images/icons/profile.svg") no-repeat center / contain;
+}
+.icon-cart {
+  background-color: #262626;
+  mask: url("../images/icons/addcart.svg") no-repeat center / contain;
+  -webkit-mask: url("../images/icons/addcart.svg") no-repeat center / contain;
+}

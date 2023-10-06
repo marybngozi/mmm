@@ -298,17 +298,275 @@
             </div>
           </div>
 
-          <!--  -->
+          <!-- RECIEVERS DETAILS -->
+          <div v-if="reciever" class="mb-[15rem] lg:mb-[5rem] w-full">
+            <div class="w-full mt-4">
+              <h1 class="text-[36px] font-mikela font-bold text-[#262626]">
+                Receivers Details
+              </h1>
+
+              <div
+                class="w-full border-2 border-[#C3B8B5] p-[16px] lg:p-[32px]"
+              >
+                <div
+                  class="w-full flex flex-row lg:flex-row justify-between items-start"
+                >
+                  <div class="w-[30%] lg:w-[20%] p-0 mr-4">
+                    <img
+                      src="@/assets/images/shop/cart/framesize.png"
+                      alt="framesize"
+                      width="100%"
+                    />
+                  </div>
+                  <div class="w-[70%] lg:w-[80%] p-0 my-0">
+                    <h2
+                      class="text-[16px] lg:text-[24px] font-raleway font-bold text-[#262626] mb-[13px]"
+                    >
+                      Cart summary
+                    </h2>
+                    <p
+                      class="text-[12px] lg:text-[16px] font-raleway font-normal text-[#262626]"
+                    >
+                      Lorem ipsum dolor sit amet consectetur. Faucibus nec sed
+                      convallis id dolor massa aliquam eget. Nibh ultrices
+                      ultricies donec consequat. Ipsum sit dui
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="flex flex-row justify-between item-center mt-[30px] mx-0"
+                >
+                  <p
+                    class="py-[5px] text-[12px] lg:text-[16px] font-raleway font-semibold italic text-[#262626]"
+                  >
+                    Cost of Cart
+                  </p>
+                  <div
+                    class="px-[20px] lg:px-[32px] py-[5px] border-2 border-[#C3B8B5]"
+                  >
+                    <h2
+                      class="text-[12px] lg:text-[16px] font-clash font-bold text-[#262626]"
+                    >
+                      NGN 27,000.00
+                    </h2>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="w-full border-2 border-[#C3B8B5] p-[16px] lg:p-[32px] mt-[24px]"
+              >
+                <h2
+                  class="text-[16px] lg:text-[24px] font-raleway font-semibold text-[#262626]"
+                >
+                  Receivers Details
+                </h2>
+
+                <div
+                  class="w-full flex flex-row justify-between items-center my-[20px]"
+                >
+                  <button
+                    class="w-[50%] mr-4 py-[10px] px-auto border-2 border-[#C3B8B5] flex justify-center items-center"
+                  >
+                    <img
+                      src="@/assets/images/icons/google-01.svg"
+                      alt="google"
+                      class="mr-0 lg:mr-2"
+                    />
+                    <span class="text-[12px] font-raleway text-[#262626] py-0"
+                      >Sign in with Gmail</span
+                    >
+                  </button>
+                  <button
+                    class="w-[50%] ml-4 py-[10px] px-auto border-2 border-[#C3B8B5] flex justify-center items-center"
+                  >
+                    <img
+                      src="@/assets/images/icons/facebook-01.svg"
+                      alt="facebook"
+                      class="mr-0 lg:mr-2"
+                    />
+                    <span class="text-[12px] font-raleway text-[#262626] py-0"
+                      >Sign in with Facebook</span
+                    >
+                  </button>
+                </div>
+                <p class="w-full text-center">Or</p>
+
+                <div class="w-full my-[24px]">
+                  <div>
+                    <label
+                      for="name"
+                      class="text-[12px] font-raleway text-[#262626] mb-2"
+                      >Name of Reciever</label
+                    >
+                    <input
+                      type="text"
+                      placeholder="Reciever's Name"
+                      class="px-[16px] py-[10px] border-2 mb-[24px] border-[#C3B8B5] w-full"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="name"
+                      class="text-[12px] font-raleway text-[#262626] mb-2"
+                      >Phone number</label
+                    >
+                    <input
+                      type="number"
+                      placeholder="Reciever's Phone"
+                      class="px-[16px] py-[10px] border-2 mb-[24px] border-[#C3B8B5] w-full"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="name"
+                      class="text-[12px] font-raleway text-[#262626] mb-2"
+                      >Email address</label
+                    >
+                    <input
+                      type="email"
+                      placeholder="Reciever's Email"
+                      class="px-[16px] py-[10px] border-2 border-[#C3B8B5] w-full"
+                    />
+                  </div>
+                </div>
+
+                <p
+                  class="text-[12px] lg:text-[18px] font-raleway font-normal w-full"
+                >
+                  So we would send <span class="font-bold">John Okor</span> with
+                  <span class="font-bold">09090909009</span> and email
+                  <span class="font-bold">Johnokor2016@gmai.com</span> your
+                  order of <span class="font-bold">the 2 items above</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- SHIPPING DETAILS -->
+          <div v-if="shippingdetails" class="mb-[15rem] lg:mb-[5rem] w-full">
+            <div class="w-full mt-4">
+              <h1 class="text-[36px] font-mikela font-bold text-[#262626]">
+                Shipping Details
+              </h1>
+
+              <div
+                class="w-full border-2 border-[#C3B8B5] p-[16px] lg:p-[32px]"
+              >
+                <div
+                  class="w-full flex flex-row lg:flex-row justify-between items-start"
+                >
+                  <div class="w-[30%] lg:w-[20%] p-0 mr-4">
+                    <img
+                      src="@/assets/images/shop/cart/framesize.png"
+                      alt="framesize"
+                      width="100%"
+                    />
+                  </div>
+                  <div class="w-[70%] lg:w-[80%] p-0 my-0">
+                    <h2
+                      class="text-[16px] lg:text-[24px] font-raleway font-bold text-[#262626] mb-[13px]"
+                    >
+                      Cart summary
+                    </h2>
+                    <p
+                      class="text-[12px] lg:text-[16px] font-raleway font-normal text-[#262626]"
+                    >
+                      Lorem ipsum dolor sit amet consectetur. Faucibus nec sed
+                      convallis id dolor massa aliquam eget. Nibh ultrices
+                      ultricies donec consequat. Ipsum sit dui
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-row justify-between item-center mt-[30px] mx-0"
+                >
+                  <p
+                    class="py-[5px] text-[12px] lg:text-[16px] font-raleway font-semibold italic text-[#262626]"
+                  >
+                    Cost of Cart
+                  </p>
+                  <div
+                    class="px-[20px] lg:px-[32px] py-[5px] border-2 border-[#C3B8B5]"
+                  >
+                    <h2
+                      class="text-[12px] lg:text-[16px] font-clash font-bold text-[#262626]"
+                    >
+                      NGN 27,000.00
+                    </h2>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="w-full border-2 border-[#C3B8B5] p-[16px] lg:p-[32px] mt-[24px]"
+              >
+                <h1 class="text-[24px] font-raleway font-bold text-[#262626]">
+                  Shipping Details
+                </h1>
+
+                <div
+                  class="w-full border-2 border-[#C3B8B5] p-0 mt-[24px] bg-[#fff] relative rounded-[5px]"
+                >
+                  <img
+                    src="@/assets/images/icons/dropdown.svg"
+                    alt="dropdown"
+                    class="mr-0 lg:mr-2 absolute right-3 top-1/2 transform -translate-y-1/2"
+                  />
+                  <select class="custom-select">
+                    <option value="option1">Country</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                  </select>
+                </div>
+
+                <div
+                  class="w-full border-2 border-[#C3B8B5] p-0 mt-[24px] bg-[#fff] relative rounded-[5px]"
+                >
+                  <img
+                    src="@/assets/images/icons/dropdown.svg"
+                    alt="dropdown"
+                    class="mr-0 lg:mr-2 absolute right-3 top-1/2 transform -translate-y-1/2"
+                  />
+                  <select class="custom-select">
+                    <option value="option1">Choose State</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                  </select>
+                </div>
+
+                <div
+                  class="w-full border-2 border-[#C3B8B5] p-0 mt-[24px] bg-[#fff] relative rounded-[5px]"
+                >
+                  <img
+                    src="@/assets/images/icons/dropdown.svg"
+                    alt="dropdown"
+                    class="mr-0 lg:mr-2 absolute right-3 top-1/2 transform -translate-y-1/2"
+                  />
+                  <select class="custom-select">
+                    <option value="option1">Choose LGA</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="addressline">Adress line 1</label>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- BUTTONS -->
         <div class="w-[30%] ml-2 mt-4 px-2 hidden lg:block">
           <div class="h-auto flex justify-start items-center flex-row mr-4">
             <button
-              :class="`group relative lg:w-[50px] w-full h-[50px] p-2 hover:border-4 hover:border-50-[#A1BEAC80] hover:bg-[#A1BEAC] ${
+              :class="`group relative lg:w-[50px] w-full h-[50px] p-2 ${
                 cart
                   ? 'bg-[#A1BEAC] border-4 border-50-[#A1BEAC80]'
-                  : 'bg-black border-4 border-[#000]'
+                  : 'bg-black'
               }`"
               @click="toggleCart"
             >
@@ -323,7 +581,7 @@
               />
               <img
                 v-else
-                src="@/assets/images/icons/cartwhite.svg"
+                src="@/assets/images/icons/addcart-white.svg"
                 :class="`absolute inset-0 transition-opacity p-1 group-hover:opacity-100 ${
                   cart ? 'opacity-0' : 'opacity-100'
                 }`"
@@ -331,7 +589,7 @@
                 width="100%"
               />
               <p
-                class="absolute right-[-11rem] text-left w-[150px] transition-text bottom-[15px] group-hover:bottom-[10px] p-0 m-0 text-[#B3B4B4] group-hover:text-[#000]"
+                class="absolute right-[-11rem] text-left w-[150px] transition-text bottom-[15px] p-0 m-0 text-[#B3B4B4] group-hover:text-[#000]"
               >
                 Cart
               </p>
@@ -339,7 +597,7 @@
           </div>
           <div class="h-auto flex justify-start items-center flex-row mr-4">
             <button
-              :class="`group relative lg:w-[50px] h-[50px] hover:border-50-[#A1BEAC80] w-full p-2 hover:border-4 hover:bg-[#A1BEAC] ${
+              :class="`group relative lg:w-[50px] h-[50px] w-full p-2 ${
                 customize
                   ? 'bg-[#A1BEAC] border-4 border-50-[#A1BEAC80]'
                   : 'bg-black'
@@ -365,7 +623,7 @@
                 width="100%"
               />
               <p
-                class="absolute right-[-11rem] text-left w-[150px] transition-text bottom-[15px] group-hover:bottom-[10px] p-0 m-0 text-[#B3B4B4] group-hover:text-[#000]"
+                class="absolute right-[-11rem] text-left w-[150px] transition-text bottom-[15px] p-0 m-0 text-[#B3B4B4] group-hover:text-[#000]"
               >
                 Customize
               </p>
@@ -373,22 +631,33 @@
           </div>
           <div class="h-auto flex justify-start items-center flex-row mr-4">
             <button
-              class="group relative bg-black lg:w-[50px] w-full h-[50px] p-2 hover:border-4 hover:border-50-[#A1BEAC80] hover:bg-[#A1BEAC]"
+              :class="`group relative lg:w-[50px] w-full h-[50px] p-2 ${
+                reciever
+                  ? 'bg-[#A1BEAC] border-4 border-50-[#A1BEAC80]'
+                  : 'bg-black '
+              }`"
+              @click="togglePersonaldetails"
             >
               <img
+                v-if="reciever === false"
                 src="@/assets/images/icons/personal_details.svg"
-                class="absolute inset-0 transition-opacity p-2 opacity-100 group-hover:opacity-0"
+                :class="`absolute inset-0 transition-opacity p-2 group-hover:opacity-100 ${
+                  reciever ? 'opacity-0' : 'opacity-100'
+                }`"
                 alt="icon"
                 width="100%"
               />
               <img
+                v-else
                 src="@/assets/images/icons/personal_details_dark.svg"
-                class="absolute inset-0 transition-opacity p-1 opacity-0 group-hover:opacity-100"
+                :class="`absolute inset-0 transition-opacity p-1 group-hover:opacity-100 ${
+                  reciever ? 'opacity-100' : 'opacity-0'
+                }`"
                 alt="icon"
                 width="100%"
               />
               <p
-                class="absolute right-[-11rem] text-left w-[150px] transition-text bottom-[15px] group-hover:bottom-[10px] p-0 m-0 text-[#B3B4B4] group-hover:text-[#000]"
+                class="absolute right-[-11rem] text-left w-[150px] transition-text bottom-[15px] p-0 m-0 text-[#B3B4B4] group-hover:text-[#000]"
               >
                 Your details
               </p>
@@ -396,7 +665,7 @@
           </div>
           <div class="h-auto flex justify-start items-center flex-row mr-4">
             <button
-              class="group relative bg-black lg:w-[50px] w-full h-[50px] p-2 hover:border-4 hover:border-50-[#A1BEAC80] hover:bg-[#A1BEAC]"
+              class="group relative bg-black lg:w-[50px] w-full h-[50px] p-2"
             >
               <img
                 src="@/assets/images/icons/shipping_details.svg"
@@ -411,7 +680,7 @@
                 width="100%"
               />
               <p
-                class="absolute right-[-11rem] text-left w-[150px] transition-text bottom-[15px] group-hover:bottom-[10px] p-0 m-0 text-[#B3B4B4] group-hover:text-[#000]"
+                class="absolute right-[-11rem] text-left w-[150px] transition-text bottom-[15px] p-0 m-0 text-[#B3B4B4] group-hover:text-[#000]"
               >
                 Shipping details
               </p>
@@ -421,7 +690,7 @@
             class="h-auto w-full flex justify-start items-center flex-row mr-4"
           >
             <button
-              class="group relative bg-black lg:w-[50px] w-full h-[50px] p-2 hover:border-4 hover:border-50-[#A1BEAC80] hover:bg-[#A1BEAC]"
+              class="group relative bg-black lg:w-[50px] w-full h-[50px] p-2"
             >
               <img
                 src="@/assets/images/icons/Purchase_summary.svg"
@@ -436,7 +705,7 @@
                 width="100%"
               />
               <p
-                class="absolute right-[-11rem] text-left w-[150px] transition-text bottom-[15px] group-hover:bottom-[10px] p-0 m-0 text-[#B3B4B4] group-hover:text-[#000]"
+                class="absolute right-[-11rem] text-left w-[150px] transition-text bottom-[15px] p-0 m-0 text-[#B3B4B4] group-hover:text-[#000]"
               >
                 Purchase summary
               </p>
@@ -446,7 +715,7 @@
             class="h-auto w-full flex justify-start items-center flex-row mr-4"
           >
             <button
-              class="group relative bg-black lg:w-[50px] w-full h-[50px] p-2 hover:border-4 hover:border-50-[#A1BEAC80] hover:bg-[#A1BEAC]"
+              class="group relative bg-black lg:w-[50px] w-full h-[50px] p-2"
             >
               <img
                 src="@/assets/images/icons/Payment_status.svg"
@@ -461,7 +730,7 @@
                 width="100%"
               />
               <p
-                class="absolute right-[-11rem] text-left w-[150px] transition-text bottom-[15px] group-hover:bottom-[10px] p-0 m-0 text-[#B3B4B4] group-hover:text-[#000]"
+                class="absolute right-[-11rem] text-left w-[150px] transition-text bottom-[15px] p-0 m-0 text-[#B3B4B4] group-hover:text-[#000]"
               >
                 Payment status
               </p>
@@ -477,7 +746,7 @@
                 :class="`group relative lg:w-[50px] w-full h-auto py-4 lg:h-[50px] p-2 hover:border-4 hover:border-50-[#A1BEAC80] hover:bg-[#A1BEAC] ${
                   cart
                     ? 'bg-[#A1BEAC] border-4 border-50-[#A1BEAC80]'
-                    : 'bg-black border-4 border-[#000]'
+                    : 'bg-black'
                 }`"
                 @click="toggleCart"
               >
@@ -533,16 +802,17 @@
             <div class="h-auto flex justify-start items-center flex-row w-full">
               <button
                 :class="`group relative lg:w-[50px] w-full h-auto py-4 lg:h-[50px] px-2 hover:border-4 hover:border-50-[#A1BEAC80] hover:bg-[#A1BEAC] ${
-                  personaldetails
+                  reciever
                     ? 'bg-[#A1BEAC] border-4 border-50-[#A1BEAC80]'
                     : 'bg-black'
                 }`"
                 @click="togglePersonaldetails"
               >
                 <img
+                  v-if="reciever === false"
                   src="@/assets/images/icons/personal_details.svg"
                   :class="`absolute inset-0 transition-opacity pl-3 pt-1 pb-1 group-hover:opacity-100 ${
-                    personaldetails ? 'opacity-0' : 'opacity-100'
+                    reciever ? 'opacity-0' : 'opacity-100'
                   }`"
                   alt="icon"
                   width="auto"
@@ -550,7 +820,7 @@
                 <img
                   src="@/assets/images/icons/personal_details_dark.svg"
                   :class="`absolute inset-0 transition-opacity  pl-3 pt-1 pb-1 group-hover:opacity-100 ${
-                    personaldetails ? 'opacity-100' : 'opacity-0'
+                    reciever ? 'opacity-100' : 'opacity-0'
                   }`"
                   alt="icon"
                   width="auto"
@@ -666,10 +936,10 @@ export default {
 
   data() {
     return {
-      cart: true,
+      cart: false,
       customize: false,
-      personaldetails: false,
-      shippingdetails: false,
+      reciever: false,
+      shippingdetails: true,
       purchase: false,
       paymentStatus: false,
     };
@@ -684,15 +954,19 @@ export default {
     toggleCart() {
       this.cart = true;
       this.customize = false;
+      this.reciever = false;
     },
 
     toggleCustomize() {
       this.customize = true;
       this.cart = false;
+      this.reciever = false;
     },
 
     togglePersonaldetails() {
-      console.log("Hello");
+      this.reciever = true;
+      this.cart = false;
+      this.customize = false;
     },
 
     toggleShippingdetails() {
@@ -709,7 +983,25 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
+@import url("../../assets/css/icons.css");
+
+.custom-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: none;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 12px;
+  color: #797371;
+  @apply w-full py-2 rounded border border-gray-300 font-raleway focus:outline-none focus:ring focus:border-blue-300;
+}
+.icon {
+  @apply w-5 h-5 lg:w-8 lg:h-8;
+}
+
 .cart {
   @apply w-full px-4 lg:p-0 mr-2;
   display: block;

@@ -68,3 +68,9 @@
   mask: url("../images/icons/addcart.svg") no-repeat center / contain;
   -webkit-mask: url("../images/icons/addcart.svg") no-repeat center / contain;
 }
+.icon-facebook {
+  background-color: #262626;
+  mask: url("../images/icons/facebook-01.svg") no-repeat center / contain;
+  -webkit-mask: url("../images/icons/facebook-01.svg") no-repeat center /
+    contain;
+}

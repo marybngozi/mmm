@@ -85,7 +85,7 @@
             <nuxt-link to="/blog"> Blog </nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/"> Shop </nuxt-link>
+            <nuxt-link to="/shop"> Shop </nuxt-link>
           </li>
           <li>
             <nuxt-link to="/mentorship"> Mentorship </nuxt-link>

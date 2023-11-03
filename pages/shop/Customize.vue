@@ -10,64 +10,12 @@
         <div
           class="flex w-full lg:w-[70%] m-0 p-0 flex-col justify-between items-start"
         >
-          <!-- CART -->
-          <div v-if="cart" :class="{ cart: cart }">
-            <div class="w-full flex justify-between items-center">
-              <h4 class="text-center font-clash text-[24px] px-2 font-normal">
-                Your Cart
-              </h4>
-              <p
-                class="border-8 border-50-[#E1C5B4] bg-[#E1C5B4] text-center font-raleway text-[12px] px-2"
-              >
-                4 Items in Cart
-              </p>
-            </div>
-            <div
-              v-for="n in 2"
-              :key="n"
-              class="w-full flex flex-col md:flex-row justify-between items-end border-2 border-[#C3B8B5] mt-[20px] p-[16px]"
-            >
-              <div
-                class="w-full lg:w-[70%] flex justify-start items-start mb-4 lg:mb-0"
-              >
-                <img src="@/assets/images/shop/cart/imagecutomize.svg" alt="" />
-                <div>
-                  <p class="w-full lg:w-[195px] ml-2 font-raleway text-[12px]">
-                    Lorem ipsum dolor sit amet consectetur.
-                  </p>
-                  <h2
-                    class="w-full lg:w-[195px] ml-2 font-raleway font-semibold text-[16px] mt-4"
-                  >
-                    NGN 27,000.00
-                  </h2>
-                </div>
-              </div>
-              <div class="w-[60%] lg:w-[30%] flex justify-between items-center">
-                <button class="p-4 bg-[#FBB91A] text-[14px]">
-                  <img src="@/assets/images/icons/minus-01.svg" alt="icon" />
-                </button>
-                <p class="text-[12px] font-raleway">2</p>
-                <button class="p-4 bg-[#FBB91A] text-[14px]">
-                  <img src="@/assets/images/icons/add-01.svg" alt="icon" />
-                </button>
-                <button class="p-3 bg-[#C3B8B5] text-[14px]">
-                  <img src="@/assets/images/icons/delete-03.svg" alt="icon" />
-                </button>
-              </div>
-            </div>
-          </div>
-
           <!-- CUSTOMIZE -->
           <div
             v-if="customize"
-            class="mb-[15rem] lg:mb-[5rem] mt-[28px] lg:mt-0"
+            class="mb-[15rem] w-full lg:mb-[5rem] mt-[28px] lg:mt-0"
           >
-            <div v-for="n in 2" :key="n" class="w-full mt-4">
-              <div
-                class="bg-[#262626] w-full h-[40px] flex justify-center items-center"
-              >
-                <h2 class="text-[#A1BEAC] font-clash text-[20px]">ITEM 1</h2>
-              </div>
+            <div class="w-full mt-4">
               <h2 class="text-[#262626] font-mikela text-[24px] my-[16px]">
                 Let’s customize this order
               </h2>
@@ -89,25 +37,24 @@
                     alt="item"
                     width="100%"
                   />
-                  <div class="w-full mt-10 flex justify-center items-center">
-                    <Button class="mr-2 lg:mr-2">
-                      <img src="@/assets/images/shop/cart/Others.svg" alt="" />
-                    </Button>
-                    <Button class="mr-2 lg:mr-2"
-                      ><img src="@/assets/images/shop/cart/Others.svg" alt=""
-                    /></Button>
-                    <Button class="mr-2 lg:mr-2"
-                      ><img src="@/assets/images/shop/cart/Others.svg" alt=""
-                    /></Button>
-                    <Button class="mr-2 lg:mr-2"
-                      ><img src="@/assets/images/shop/cart/Others.svg" alt=""
-                    /></Button>
-                    <Button class="mr-2 lg:mr-2"
-                      ><img src="@/assets/images/shop/cart/Others.svg" alt=""
-                    /></Button>
-                    <Button class="mr-2 lg:mr-2"
-                      ><img src="@/assets/images/shop/cart/Others.svg" alt=""
-                    /></Button>
+                  <div
+                    class="w-full flex justify-between items-start p-[16px] lg:w-full mt-2 h-[88px] border-[2px] bg-none border-[#C3B8B5]"
+                  >
+                    <img
+                      src="@/assets/images/icons/quill-write-02.svg"
+                      alt="item"
+                    />
+                    <div class="w-full lg:w-[400px]">
+                      <h2 class="text-[12px] font-raleway font-semibold">
+                        What words would inspire you if you could see them
+                        everyday?
+                      </h2>
+                      <input
+                        type="text"
+                        placeholder="Type it here"
+                        class="italic text-[12px] font-raleway pt-2 w-full lg:w-[400px] border-none focus:outline-none"
+                      />
+                    </div>
                   </div>
                 </div>
 
@@ -126,7 +73,7 @@
                           alt="icon"
                         />
                       </button>
-                      <p class="text-[12px] text-[#262626] font-raleway">2</p>
+                      <p class="text-[12px] text-[#262626] font-raleway">1</p>
                       <button class="p-4 bg-[#FBB91A] text-[14px]">
                         <img
                           src="@/assets/images/icons/add-01.svg"
@@ -200,131 +147,6 @@
                       alt="framesize"
                       width="100%"
                     />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- SUGGESTION -->
-            <div class="w-full mt-[10rem] mb-[20rem] hidden lg:block">
-              <h2
-                class="mb-[15px] font-clash text-[16px] font-semibold text-left lg:w-[343px]"
-              >
-                Based on your choices, I felt you might also want these
-              </h2>
-              <div
-                class="flex flex-col lg:flex-row w-full justify-between items-center"
-              >
-                <div
-                  class="w-auto h-auto border-2 border-[#C3B8B5] p-[16px] mr-0 lg:mr-[16px] mt-4 lg:mt-0"
-                >
-                  <img
-                    src="@/assets/images/shop/cart/framesize.png"
-                    alt="framesize"
-                  />
-                  <div class="flex items-end justify-end mt-[16px]">
-                    <button class="p-4 bg-[#FBB91A] text-[14px]">
-                      <img src="@/assets/images/icons/add-01.svg" alt="icon" />
-                    </button>
-                  </div>
-                </div>
-                <div
-                  class="w-auto h-auto border-2 border-[#C3B8B5] p-[16px] mr-0 lg:mr-[16px] mt-4 lg:mt-0"
-                >
-                  <img
-                    src="@/assets/images/shop/cart/framesize.png"
-                    alt="framesize"
-                  />
-                  <div class="flex items-end justify-end mt-[16px]">
-                    <button class="p-4 bg-[#FBB91A] text-[14px]">
-                      <img src="@/assets/images/icons/add-01.svg" alt="icon" />
-                    </button>
-                  </div>
-                </div>
-                <div
-                  class="w-auto h-auto border-2 border-[#C3B8B5] p-[16px] mr-0 lg:mr-[16px] mt-4 lg:mt-0"
-                >
-                  <img
-                    src="@/assets/images/shop/cart/framesize.png"
-                    alt="framesize"
-                  />
-                  <div class="flex items-end justify-end mt-[16px]">
-                    <button class="p-4 bg-[#FBB91A] text-[14px]">
-                      <img src="@/assets/images/icons/add-01.svg" alt="icon" />
-                    </button>
-                  </div>
-                </div>
-                <div
-                  class="w-auto h-auto border-2 border-[#C3B8B5] p-[16px] mt-4 lg:mt-0"
-                >
-                  <img
-                    src="@/assets/images/shop/cart/framesize.png"
-                    alt="framesize"
-                  />
-                  <div class="flex items-end justify-end mt-[16px]">
-                    <button class="p-4 bg-[#FBB91A] text-[14px]">
-                      <img src="@/assets/images/icons/add-01.svg" alt="icon" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- SUGGESTION SMALL SCREEN -->
-            <div
-              class="w-full h-auto mt-[4rem] mb-[10rem] block lg:hidden overflow-hidden"
-            >
-              <div class="w-full h-auto grid grid-cols-2">
-                <div
-                  class="w-auto h-auto border-2 border-[#C3B8B5] p-[16px] mr-[16px] mt-4 lg:mt-0"
-                >
-                  <img
-                    src="@/assets/images/shop/cart/framesize.png"
-                    alt="framesize"
-                  />
-                  <div class="flex items-end justify-end mt-[16px]">
-                    <button class="p-4 bg-[#FBB91A] text-[14px]">
-                      <img src="@/assets/images/icons/add-01.svg" alt="icon" />
-                    </button>
-                  </div>
-                </div>
-                <div
-                  class="w-auto h-auto border-2 border-[#C3B8B5] p-[16px] mr-0 lg:mr-[16px] mt-4 lg:mt-0"
-                >
-                  <img
-                    src="@/assets/images/shop/cart/framesize.png"
-                    alt="framesize"
-                  />
-                  <div class="flex items-end justify-end mt-[16px]">
-                    <button class="p-4 bg-[#FBB91A] text-[14px]">
-                      <img src="@/assets/images/icons/add-01.svg" alt="icon" />
-                    </button>
-                  </div>
-                </div>
-                <div
-                  class="w-auto h-auto border-2 border-[#C3B8B5] p-[16px] mr-[16px] lg:mr-[16px] mt-4 lg:mt-0"
-                >
-                  <img
-                    src="@/assets/images/shop/cart/framesize.png"
-                    alt="framesize"
-                  />
-                  <div class="flex items-end justify-end mt-[16px]">
-                    <button class="p-4 bg-[#FBB91A] text-[14px]">
-                      <img src="@/assets/images/icons/add-01.svg" alt="icon" />
-                    </button>
-                  </div>
-                </div>
-                <div
-                  class="w-auto h-auto border-2 border-[#C3B8B5] p-[16px] mt-4 lg:mt-0"
-                >
-                  <img
-                    src="@/assets/images/shop/cart/framesize.png"
-                    alt="framesize"
-                  />
-                  <div class="flex items-end justify-end mt-[16px]">
-                    <button class="p-4 bg-[#FBB91A] text-[14px]">
-                      <img src="@/assets/images/icons/add-01.svg" alt="icon" />
-                    </button>
                   </div>
                 </div>
               </div>
@@ -789,38 +611,6 @@
           >
             <div
               :class="`group relative lg:w-[50px] w-full h-auto lg:h-[50px] py-2 flex justify-center items-center ${
-                cart
-                  ? 'bg-[#A1BEAC] border-4 border-50-[#A1BEAC80]'
-                  : 'bg-black'
-              }`"
-            >
-              <button v-if="cart" @click="toggleCart">
-                <img
-                  src="@/assets/images/icons/addcart.svg"
-                  alt="icon"
-                  width="30px"
-                />
-              </button>
-              <button v-else @click="toggleCart">
-                <img
-                  src="@/assets/images/icons/cartwhite.svg"
-                  alt="icon"
-                  width="30px"
-                />
-              </button>
-
-              <p
-                :class="`absolute left-[4rem] text-left w-[150px] text-[16px] transition-text p-0 m-0 text-[#B3B4B4] ${
-                  cart
-                    ? 'text-[#000] font-bold p-0 m-0'
-                    : 'text-[#B3B4B4] p-0 m-0'
-                }`"
-              >
-                Cart
-              </p>
-            </div>
-            <div
-              :class="`group relative lg:w-[50px] w-full h-auto lg:h-[50px] py-2 flex justify-center items-center ${
                 customize
                   ? 'bg-[#A1BEAC] border-4 border-50-[#A1BEAC80]'
                   : 'bg-black'
@@ -1192,8 +982,7 @@ export default {
 
   data() {
     return {
-      cart: false,
-      customize: false,
+      customize: true,
       reciever: false,
       shippingdetails: false,
       purchase: false,

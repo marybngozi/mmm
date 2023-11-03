@@ -155,7 +155,7 @@ export default {
 @import url("../../assets/css/icons.css");
 
 header {
-  @apply bg-transparent fixed top-4 left-4 lg:left-14 right-4 lg:right-14;
+  @apply bg-[#fff] fixed top-0 left-0 lg:left-14 right-0 lg:right-14;
   z-index: 5;
 }
 .top {

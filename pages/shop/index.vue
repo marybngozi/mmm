@@ -63,28 +63,28 @@
       <div
         class="w-full lg:w-[80%] p-0 lg:p-8 flex flex-col lg:flex-row justify-between items-center"
       >
-        <div class="lg:mr-8 w-full lg:w-[70%]">
+        <div class="lg:mr-0 w-full lg:w-[60%]">
           <h1
-            class="text-[#000] font-mikela lg:text-left text-center text-5xl w-full lg:w-[453px] font-semibold text-[40px] lg:text-[64px]"
+            class="text-[#000] font-mikela lg:text-left text-center text-5xl w-full lg:w-[527px] font-semibold text-[40px] lg:text-[64px]"
           >
             I want you to inspire you
           </h1>
           <p
-            class="text-[#262626] font-raleway lg:text-left text-center text-sm w-full lg:w-[453px] mt-[20px] font-normal text-[16px] lg:text-[20px]"
+            class="text-[#262626] font-raleway lg:text-left text-center text-sm w-full lg:w-[527px] mt-[20px] font-normal text-[16px] lg:text-[20px]"
           >
             Give us your own words, then allow us make a great wine out of it
             just for you. Feel free to be your own inspiration; there will be no
             extra charge for its design.
           </p>
           <p
-            class="text-[#797371] font-raleway lg:text-left text-center text-sm w-full lg:w-[453px] my-[20px] leading-[18.78px] font-normal text-[12px] lg:text-[16px]"
+            class="text-[#797371] font-raleway lg:text-left text-center text-sm w-full lg:w-[527px] my-[20px] leading-[18.78px] font-normal text-[12px] lg:text-[16px]"
           >
             By using this service, you are permitting us to use your words to
             inspire others too.
           </p>
         </div>
-        <div class="relative w-full lg:w-[30%]">
-          <div class="py-[10px] bg-[#E1C5B4] w-full my-[15px]">
+        <div class="relative w-full lg:w-[40%]">
+          <div class="py-[10px] bg-[#E1C5B4] w-full lg:w-[437px] my-[15px]">
             <p
               class="text-center text-[16px] font-raleway text-[#262626] font-bold"
             >
@@ -93,8 +93,8 @@
           </div>
           <img src="@/assets/images/shop/canvas-img.svg" alt="" />
           <button
-            class="w-auto absolute right-[20px] bottom-[20px] border-2 border-[#FBB91A] bg-[#FBB91A] ml-2 py-[12px] px-[20px] flex justify-center items-center"
-            @click="pushtoCart"
+            class="w-auto absolute right-[40px] bottom-[30px] border-2 border-[#FBB91A] bg-[#FBB91A] ml-2 py-[12px] px-[20px] flex justify-center items-center"
+            @click="pushtoCart(1)"
           >
             <img src="@/assets/images/icons/customize_icon.svg" alt="icon" />
             <p
@@ -107,11 +107,18 @@
       </div>
 
       <div class="w-full lg:w-[85%] relative mt-[50px] lg:mt-[120px]">
-        <div class="hidden lg:block">
+        <div class="hidden lg:block mx-auto">
           <div
-            class="absolute right-[-5%] top-[50px] py-4 flex flex-col w-[50px] h-auto bg-[#262626] z-9999"
+            :class="`${
+              isFixed
+                ? 'fixed top-[4rem] right-[7.2rem] z-2 transition-transform duration-700'
+                : 'absolute top-0 right-0 z-2'
+            } py-4 flex flex-col w-[50px] h-auto bg-[#262626]`"
           >
-            <button class="flex justify-center items-center pb-4 pt-2 relative">
+            <button
+              class="flex justify-center items-center pb-4 pt-2 relative"
+              @click="pushtoCart"
+            >
               <img src="@/assets/images/icons/cartwhite.svg" alt="icon" />
               <span
                 v-if="cart !== 0"
@@ -158,7 +165,7 @@
             </p>
           </button>
           <button
-            :class="`w-auto border-2 border-[#C3B8B5] mr-2 py-2 px-2 text-center ${
+            :class="`w-auto border-2 border-[#C3B8B5] mr-2 py-2 px-4 text-center ${
               allItems ? 'bg-[#A1BEAC]  border-2 border-[#A1BEAC]' : ''
             }`"
             @click="toggleAllItem"
@@ -200,7 +207,7 @@
 
         <div v-if="newItems" v-for="n in 3" :key="n" class="w-full mt-[40px]">
           <div
-            class="flex flex-col md:flex-col lg:flex-row justify-between items-center"
+            class="flex flex-col md:flex-col lg:flex-row justify-start items-center"
           >
             <div class="border-b-2 border-[#C3B8B5] py-[20px]">
               <img src="@/assets/images/shop/newframe.svg" alt="" />
@@ -228,7 +235,7 @@
               </div>
               <div class="flex justify-between items-center mt-[20px]">
                 <button
-                  class="w-full border-2 border-[#C3B8B5] mr-2 p-4 flex justify-center items-center"
+                  class="w-full border-2 border-[#C3B8B5] mr-2 px-4 h-[40px] flex justify-center items-center"
                   @click="addtocart"
                 >
                   <img src="@/assets/images/icons/addcart.svg" alt="icon" />
@@ -239,21 +246,24 @@
                   </p>
                 </button>
                 <button
-                  class="w-full border-2 border-[#FBB91A] bg-[#FBB91A] ml-2 p-4 flex justify-center items-center"
+                  class="w-full border-2 border-[#FBB91A] bg-[#FBB91A] ml-2 px-4 h-[40px] flex justify-center items-center"
+                  @click="pushtoCart(1)"
                 >
                   <img
                     src="@/assets/images/icons/customize_icon.svg"
                     alt="icon"
                   />
                   <p
-                    class="text-[#797371] font-raleway text-center text-sm ml-2 font-normal text-[12px]"
+                    class="text-[#262626] font-raleway text-center text-sm ml-2 font-normal text-[12px]"
                   >
                     Customize
                   </p>
                 </button>
               </div>
             </div>
-            <div class="border-b-2 border-[#C3B8B5] py-[20px]">
+            <div
+              class="border-b-2 border-[#C3B8B5] ml-0 lg:ml-[5rem] py-[20px]"
+            >
               <img src="@/assets/images/shop/newframe2.svg" alt="" />
               <div class="w-full flex justify-between items-end">
                 <div>
@@ -279,7 +289,7 @@
               </div>
               <div class="flex justify-between items-center mt-[20px]">
                 <button
-                  class="w-full border-2 border-[#C3B8B5] mr-2 p-4 flex justify-center items-center"
+                  class="w-full border-2 border-[#C3B8B5] mr-2 px-4 h-[40px] flex justify-center items-center"
                 >
                   <img src="@/assets/images/icons/addcart.svg" alt="icon" />
                   <p
@@ -289,21 +299,24 @@
                   </p>
                 </button>
                 <button
-                  class="w-full border-2 border-[#FBB91A] bg-[#FBB91A] ml-2 p-4 flex justify-center items-center"
+                  class="w-full border-2 border-[#FBB91A] bg-[#FBB91A] ml-2 px-4 h-[40px] flex justify-center items-center"
+                  @click="pushtoCart(1)"
                 >
                   <img
                     src="@/assets/images/icons/customize_icon.svg"
                     alt="icon"
                   />
                   <p
-                    class="text-[#797371] font-raleway text-center text-sm ml-2 font-normal text-[12px]"
+                    class="text-[#262626] font-raleway text-center text-sm ml-2 font-normal text-[12px]"
                   >
                     Customize
                   </p>
                 </button>
               </div>
             </div>
-            <div class="border-b-2 border-[#C3B8B5] py-[20px]">
+            <div
+              class="border-b-2 border-[#C3B8B5] ml-0 lg:ml-[5rem] py-[20px]"
+            >
               <img src="@/assets/images/shop/newwriteup.svg" alt="" />
               <div class="w-full flex justify-between items-end">
                 <div>
@@ -329,7 +342,7 @@
               </div>
               <div class="flex justify-between items-center mt-[20px]">
                 <button
-                  class="w-full border-2 border-[#C3B8B5] mr-2 p-4 flex justify-center items-center"
+                  class="w-full border-2 border-[#C3B8B5] mr-2 px-4 h-[40px] flex justify-center items-center"
                 >
                   <img src="@/assets/images/icons/addcart.svg" alt="icon" />
                   <p
@@ -339,14 +352,15 @@
                   </p>
                 </button>
                 <button
-                  class="w-full border-2 border-[#FBB91A] bg-[#FBB91A] ml-2 p-4 flex justify-center items-center"
+                  class="w-full border-2 border-[#FBB91A] bg-[#FBB91A] ml-2 px-4 h-[40px] flex justify-center items-center"
+                  @click="pushtoCart(1)"
                 >
                   <img
                     src="@/assets/images/icons/customize_icon.svg"
                     alt="icon"
                   />
                   <p
-                    class="text-[#797371] font-raleway text-center text-sm ml-2 font-normal text-[12px]"
+                    class="text-[#262626] font-raleway text-center text-sm ml-2 font-normal text-[12px]"
                   >
                     Customize
                   </p>
@@ -358,10 +372,10 @@
 
         <div v-if="allItems" v-for="n in 3" :key="n" class="w-full mt-[40px]">
           <div
-            class="flex flex-col md:flex-col lg:flex-row justify-between items-center"
+            class="flex flex-col md:flex-col lg:flex-row justify-start items-center"
           >
             <div class="border-b-2 border-[#C3B8B5] py-[20px]">
-              <img src="@/assets/images/shop/newframe2.svg" alt="" />
+              <img src="@/assets/images/shop/newframe2.svg" alt="Icon" />
               <div class="w-full flex justify-between items-end">
                 <div>
                   <p
@@ -386,7 +400,7 @@
               </div>
               <div class="flex justify-between items-center mt-[20px]">
                 <button
-                  class="w-full border-2 border-[#C3B8B5] mr-2 p-4 flex justify-center items-center"
+                  class="w-full border-2 border-[#C3B8B5] mr-2 px-4 h-[40px] flex justify-center items-center"
                 >
                   <img src="@/assets/images/icons/addcart.svg" alt="icon" />
                   <p
@@ -396,21 +410,23 @@
                   </p>
                 </button>
                 <button
-                  class="w-full border-2 border-[#FBB91A] bg-[#FBB91A] ml-2 p-4 flex justify-center items-center"
+                  class="w-full border-2 border-[#FBB91A] bg-[#FBB91A] ml-2 px-4 h-[40px] flex justify-center items-center"
                 >
                   <img
                     src="@/assets/images/icons/customize_icon.svg"
                     alt="icon"
                   />
                   <p
-                    class="text-[#797371] font-raleway text-center text-sm ml-2 font-normal text-[12px]"
+                    class="text-[#262626] font-raleway text-center text-sm ml-2 font-normal text-[12px]"
                   >
                     Customize
                   </p>
                 </button>
               </div>
             </div>
-            <div class="border-b-2 border-[#C3B8B5] py-[20px]">
+            <div
+              class="border-b-2 border-[#C3B8B5] ml-0 lg:ml-[5rem] py-[20px]"
+            >
               <img src="@/assets/images/shop/newframe.svg" alt="" />
               <div class="w-full flex justify-between items-end">
                 <div>
@@ -436,7 +452,7 @@
               </div>
               <div class="flex justify-between items-center mt-[20px]">
                 <button
-                  class="w-full border-2 border-[#C3B8B5] mr-2 p-4 flex justify-center items-center"
+                  class="w-full border-2 border-[#C3B8B5] mr-2 px-4 h-[40px] flex justify-center items-center"
                 >
                   <img src="@/assets/images/icons/addcart.svg" alt="icon" />
                   <p
@@ -446,21 +462,23 @@
                   </p>
                 </button>
                 <button
-                  class="w-full border-2 border-[#FBB91A] bg-[#FBB91A] ml-2 p-4 flex justify-center items-center"
+                  class="w-full border-2 border-[#FBB91A] bg-[#FBB91A] ml-2 px-4 h-[40px] flex justify-center items-center"
                 >
                   <img
                     src="@/assets/images/icons/customize_icon.svg"
                     alt="icon"
                   />
                   <p
-                    class="text-[#797371] font-raleway text-center text-sm ml-2 font-normal text-[12px]"
+                    class="text-[#262626] font-raleway text-center text-sm ml-2 font-normal text-[12px]"
                   >
                     Customize
                   </p>
                 </button>
               </div>
             </div>
-            <div class="border-b-2 border-[#C3B8B5] py-[20px]">
+            <div
+              class="border-b-2 border-[#C3B8B5] ml-0 lg:ml-[5rem] py-[20px]"
+            >
               <img src="@/assets/images/shop/newwriteup.svg" alt="" />
               <div class="w-full flex justify-between items-end">
                 <div>
@@ -486,7 +504,7 @@
               </div>
               <div class="flex justify-between items-center mt-[20px]">
                 <button
-                  class="w-full border-2 border-[#C3B8B5] mr-2 p-4 flex justify-center items-center"
+                  class="w-full border-2 border-[#C3B8B5] mr-2 px-4 h-[40px] flex justify-center items-center"
                 >
                   <img src="@/assets/images/icons/addcart.svg" alt="icon" />
                   <p
@@ -496,14 +514,14 @@
                   </p>
                 </button>
                 <button
-                  class="w-full border-2 border-[#FBB91A] bg-[#FBB91A] ml-2 p-4 flex justify-center items-center"
+                  class="w-full border-2 border-[#FBB91A] bg-[#FBB91A] ml-2 px-4 h-[40px] flex justify-center items-center"
                 >
                   <img
                     src="@/assets/images/icons/customize_icon.svg"
                     alt="icon"
                   />
                   <p
-                    class="text-[#797371] font-raleway text-center text-sm ml-2 font-normal text-[12px]"
+                    class="text-[#262626] font-raleway text-center text-sm ml-2 font-normal text-[12px]"
                   >
                     Customize
                   </p>
@@ -564,9 +582,12 @@ export default {
 
   data() {
     return {
+      customize: "",
       newItems: true,
       allItems: false,
       cart: 0,
+      isFixed: false,
+      scrollPosition: 1700, // Adjust this value as needed
     };
   },
 
@@ -574,8 +595,14 @@ export default {
     ShopHeader,
     ShopFooter,
   },
-
   methods: {
+    handleScroll() {
+      if (window.scrollY >= this.scrollPosition) {
+        this.isFixed = true;
+      } else {
+        this.isFixed = false;
+      }
+    },
     togglenewItem() {
       this.newItems = true;
       this.allItems = false;
@@ -584,13 +611,24 @@ export default {
       this.allItems = true;
       this.newItems = false;
     },
-    pushtoCart() {
-      this.$router.push("/shop/carthistory");
+    pushtoCart(id) {
+      // console.log(id);
+      this.$router.push({
+        path: "/shop/carthistory",
+        query: { parameter: id },
+      });
     },
 
     addtocart() {
       this.cart++;
     },
+  },
+
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.handleScroll);
   },
 };
 </script>
@@ -605,6 +643,10 @@ export default {
   background-attachment: scroll;
   background-position: center;
   background-origin: content-box;
+}
+
+.transition-transform {
+  transition-delay: 1.5s; /* Add a 0.5-second delay to the transition */
 }
 
 /* .blogBody {

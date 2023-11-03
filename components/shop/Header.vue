@@ -175,7 +175,7 @@ export default {
 @import url("../../assets/css/icons.css");
 
 header {
-  @apply border-2 lg:border border-[#262626] bg-transparent fixed top-4 left-4 lg:left-14 right-4 lg:right-14;
+  @apply border-2 lg:border border-[#262626] bg-transparent absolute top-4 left-4 lg:left-14 right-4 lg:right-14;
   z-index: 5;
 }
 .top {

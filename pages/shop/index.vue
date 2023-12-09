@@ -94,7 +94,7 @@
           <img src="@/assets/images/shop/canvas-img.svg" alt="" />
           <button
             class="w-auto absolute right-[40px] bottom-[30px] border-2 border-[#FBB91A] bg-[#FBB91A] ml-2 py-[12px] px-[20px] flex justify-center items-center"
-            @click="pushtoCart(1)"
+            @click="pushtoCustomize"
           >
             <img src="@/assets/images/icons/customize_icon.svg" alt="icon" />
             <p
@@ -616,6 +616,12 @@ export default {
       this.$router.push({
         path: "/shop/carthistory",
         query: { parameter: id },
+      });
+    },
+    pushtoCustomize() {
+      // console.log(id);
+      this.$router.push({
+        path: "/shop/customize",
       });
     },
 

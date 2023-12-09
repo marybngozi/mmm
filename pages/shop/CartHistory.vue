@@ -87,7 +87,7 @@
                   <img
                     src="@/assets/images/shop/cart/cartcustomize.png"
                     alt="item"
-                    width="100%"
+                    class="w-[100%] h-[730px]"
                   />
                   <div class="w-full mt-10 flex justify-center items-center">
                     <Button class="mr-2 lg:mr-2">
@@ -120,14 +120,18 @@
                       Item Number
                     </p>
                     <div class="w-[40%] flex justify-between items-center">
-                      <button class="p-4 bg-[#FBB91A] text-[14px]">
+                      <button
+                        class="p-3 border-2 border-[#FBB91A] bg-[#FBB91A] text-[14px]"
+                      >
                         <img
                           src="@/assets/images/icons/minus-01.svg"
                           alt="icon"
                         />
                       </button>
-                      <p class="text-[12px] text-[#262626] font-raleway">2</p>
-                      <button class="p-4 bg-[#FBB91A] text-[14px]">
+                      <p class="text-[14px] text-[#262626] font-raleway">2</p>
+                      <button
+                        class="p-3 border-2 border-[#FBB91A] bg-[#FBB91A] text-[14px]"
+                      >
                         <img
                           src="@/assets/images/icons/add-01.svg"
                           alt="icon"
